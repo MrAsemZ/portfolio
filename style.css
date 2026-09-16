@@ -1,0 +1,159 @@
+/*
+elements
+*/
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    color: #e9e9ee;
+}
+
+/*
+id's
+*/
+
+#logo {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e9e9ee;
+}
+
+#logo-part {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #c8ff4d;
+}
+
+#nav-links a {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: #9a9ea8;
+}
+
+#nav-links a:hover {
+    color: #e9e9ee;
+}
+
+#hero-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: #c8ff4d;
+}
+
+#hero-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem); /* Clamp is used to make size differ */
+    font-weight: 700;
+    color: #e9e9ee;
+}
+
+#hero-desc {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.05rem;
+    color: #9a9ea8;
+}
+
+#btn-work,
+#btn-contact {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+#about-desc-1,
+#about-desc-2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    color: #9a9ea8;
+}
+
+#skills-list li {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.78rem;
+    color: #9a9ea8;
+}
+
+#email-link {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1.5rem, 1.8vw + 1rem, 2.8rem);
+    font-weight: 700;
+    color: #e9e9ee;
+}
+
+#resume-link {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #e9e9ee;
+}
+
+#footer-link {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    color: #9a9ea8;
+}
+
+#footer-link:hover {
+    color: #c8ff4d;
+}
+
+/*
+classes
+*/
+
+.section-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    color: #8fb838;
+}
+
+.project-name {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e9e9ee;
+}
+
+.status-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #8fb838;
+}
+
+.project-description {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.95rem;
+    color: #9a9ea8;
+}
+
+.tech-stack {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    color: #6d7280;
+}
+
+.phone-link {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+    color: #9a9ea8;
+}
+
+.social-link {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: #9a9ea8;
+}
+
+.footer-content {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    color: #5c6270;
+}
+
+/*
+font-family: "Space Grotesk", sans-serif;
+font-family: "JetBrains Mono", monospace;
+*/
