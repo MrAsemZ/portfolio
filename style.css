@@ -170,14 +170,7 @@ id's
     align-items: start;
 }
 
-#about-journey{
-    width: 100%;
-    aspect-ratio: 16/11;
-    border-radius: 14px;
-    border: 1px solid #232630;
 
-    background-color: #15171c;
-}
 
 #about-text{
     display: flex;
@@ -405,6 +398,41 @@ classes
         gap: 2.5rem;
     }
 }
+
+
+
+
+
+/* JOURNEY MAP STUFF*/
+
+
+.route{
+       position:absolute;
+       inset:0;/* ITS EQUAT TO TOP, BOTTOM, LEFT, RIGHT = 0;**/
+       width:100%;
+       height:100%;
+    }
+.route path{
+    fill:none;/*TO REMOVE THE BACKGROUND*/
+    stroke:#3a4152; /*OUTLINE COLOR*/
+    stroke-width:.6; /*OUTLINE WIDTH*/
+    stroke-dasharray:2.2 2.4; /*LINE LENGTH 2.2*** GAPS 2.4*/
+    stroke-linecap:round;/*SIMILAR TO BORDER-RADIUS*/
+}
+
+#journey-map{
+    width: 100%;
+    aspect-ratio: 16/11;
+    border-radius: 14px;
+    border: 1px solid #232630;
+
+    background-color: #15171c;
+
+    position: relative;
+    
+}
+
+
 
 /*
 font-family: "Space Grotesk", sans-serif;
