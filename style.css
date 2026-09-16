@@ -1,4 +1,11 @@
 /*
+general
+*/
+*{
+    box-sizing: border-box; /*to ensure all are the same*/
+}
+
+/*
 elements
 */
 
@@ -190,6 +197,8 @@ id's
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+
+    flex-wrap: wrap;
 }
 
 #skills-list li {
@@ -256,6 +265,7 @@ classes
 */
 
 .wrap{
+    width: 100%;
     max-width: 1040px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -317,6 +327,12 @@ classes
     flex-direction: column;
 
     background-color: #15171c;
+
+    transition: color 0.2s ease;
+}
+
+.project-card:hover{
+    border-color: #c8ff4d;
 }
 
 .project-description {
@@ -455,11 +471,104 @@ classes
     position: absolute;
 }
 
+.stop input[type="radio"]:checked ~ .card {
+    display: block;
+}   /*means get to .stop and go input of type radio then see if its checked
+    if yes go to .card and change this {}*/
+
+    
 .card{
     display: none;
+    z-index: 3;
+    width: 180px;
 }
 
-/*
-font-family: "Space Grotesk", sans-serif;
-font-family: "JetBrains Mono", monospace;
-*/
+
+/**
+General responsive design
+
+
+**/
+
+/* TABLET / SMALL LAPTOP */
+@media (max-width: 1024px) {
+}
+
+/* TABLET / LARGE PHONE */
+@media (max-width: 820px) {
+}
+
+
+/* PHONE */
+@media (max-width: 600px) {
+}
+
+/* SMALL PHONE */
+@media (max-width: 400px) {
+}
+
+/*Projects part*/
+@media (max-width: 700px){
+    #projects-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Navbar part*/
+@media (max-width: 700px){
+    #navbar{
+        padding: 0 1rem;
+    }
+    #nav-links{
+        gap: 1rem;
+    }
+
+}
+
+/*Navbar and logo on small phones*/
+@media (max-width: 500px) {
+    #logo {
+        font-size: 0.8rem;
+    }
+
+    #logo-part {
+        font-size: 0.8rem;
+    }
+
+    #nav-links {
+        gap: 0.7rem;
+    }
+
+    #nav-links a {
+        font-size: 0.7rem;
+    }
+}
+
+/* hero part */
+@media (max-width: 600px){
+    #home-card{
+        padding: 2rem 1.25rem;
+    }
+}
+
+/*section vertical spaces*/
+@media (max-width: 600px){
+    .section{
+        padding: 3rem 0;
+    }
+}
+
+/*home distance from nav*/
+@media (max-width: 600px) {
+    #home {
+        padding-top: 80px;
+    }
+}
+
+/*footer wrap*/
+@media (max-width: 500px) {
+    #footer-wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+}
