@@ -17,12 +17,29 @@ id's
 */
 
 #navbar{
+    position: fixed;
+
+    z-index: 100;
+    padding: 0 1.5rem;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
     width: 100%;
     height: 60px;
     border-bottom: 1px solid #262933;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.section{
+    padding: 4.5rem 0;
+}
+
+#home{
+    padding-top: 100px;
 }
 
 #home-card{
@@ -36,7 +53,6 @@ id's
     display: flex;
     gap: 0.8rem;
     align-items: center;
-    padding: 0.7rem 1.3rem;
 }
 
 
@@ -96,6 +112,19 @@ id's
     font-weight: 500;
     border-radius: 7px;
     text-decoration: none;
+    padding: 0.7rem 1.3rem;
+}
+
+#btn-work{
+    background: #c8ff4d;
+    color: #0c0d10;
+    border: 1px solid #c8ff4d;
+}
+
+#btn-contact{
+    background: transparent;
+    color: #e9e9ee;
+    border: 1px solid #262a34;
 }
 
 #about-journey{
@@ -105,11 +134,24 @@ id's
     border: 1px solid #232630;
 }
 
+#about-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 #about-desc-1,
 #about-desc-2 {
     font-family: "Space Grotesk", sans-serif;
     font-size: 1rem;
     color: #9a9ea8;
+}
+
+#skills-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 #skills-list li {
@@ -150,6 +192,12 @@ id's
 classes
 */
 
+.wrap{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
 .section-label {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.8rem;
@@ -162,6 +210,12 @@ classes
     font-weight: 700;
     color: #e9e9ee;
 
+}
+
+#projects-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 .project-name {
@@ -183,6 +237,7 @@ classes
     min-height: 290px;
     border-radius: 12px;
     border:1px solid #262a34;
+    padding: 2rem;
 }
 
 .project-description {
@@ -208,6 +263,12 @@ classes
     color: #9a9ea8;
 }
 
+#social-row{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .social-link {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.85rem;
@@ -217,6 +278,14 @@ classes
 .social-link svg{
     width: 16px;
     height: 16px;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
 .footer-content {
