@@ -429,10 +429,35 @@ classes
     background-color: #15171c;
 
     position: relative;
-    
+}
+/*size is : viewBox="0 0 100 68"*/
+#journey-container-1{
+    left: 8%;
+    top: 77%;
 }
 
+#journey-container-2{
+    left: 46%;
+    top: 38%;
+}
 
+#journey-container-3{
+    left: 72%;
+    top: 53%;
+}
+
+#journey-container-4{
+    left: 89%;
+    top: 26%;
+}
+
+.stop{
+    position: absolute;
+}
+
+.card{
+    display: none;
+}
 
 /*
 font-family: "Space Grotesk", sans-serif;
