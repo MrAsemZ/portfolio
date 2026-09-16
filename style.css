@@ -71,6 +71,7 @@ id's
     font-size: 0.95rem;
     font-weight: 600;
     color: #e9e9ee;
+    text-decoration: none;
 }
 
 #logo-part {
@@ -96,7 +97,7 @@ id's
     background-repeat: no-repeat;
     background-size: 0% 1px;
     background-position: left bottom;
-    transition: background-size 0.28s cubic-bezier(.15,.8,.25,1), color 0.2s ease;
+    transition: background-size 0.28s, color 0.2s ease;
 }
 
 #nav-links a:hover {
@@ -132,6 +133,8 @@ id's
     border-radius: 7px;
     text-decoration: none;
     padding: 0.7rem 1.3rem;
+
+    transition: 0.2s ease;
 }
 
 #btn-work{
@@ -146,6 +149,18 @@ id's
     background: transparent;
     color: #e9e9ee;
     border: 1px solid #262a34;
+}
+
+#btn-work:hover {
+    background: transparent;
+    border-color: #262a34;
+    color: #e9e9ee;
+}
+
+#btn-contact:hover {
+    background: #c8ff4d;
+    border-color: #c8ff4d;
+    color: #0c0d10;
 }
 
 #about-grid{
@@ -198,15 +213,39 @@ id's
     font-size: clamp(1.5rem, 1.8vw + 1rem, 2.8rem);
     font-weight: 700;
     color: #e9e9ee;
+
+    transition: color 0.2s ease;
+}
+
+#email-link:hover {
+    color: #c8ff4d;
 }
 
 #resume-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-top: 2.5rem;
+    padding: 0.7rem 1.2rem;
+
     font-family: "JetBrains Mono", monospace;
     font-size: 0.85rem;
     font-weight: 500;
+
     color: #e9e9ee;
+    text-decoration: none;
+
+    border: 1px solid #262a34;
     border-radius: 7px;
-    border:1px solid #262a34;
+
+    transition: 0.2s ease;
+}
+
+#resume-link:hover {
+    background: #c8ff4d;
+    border-color: #c8ff4d;
+    color: #0c0d10;
 }
 
 #footer-link {
@@ -232,10 +271,13 @@ classes
 #footer-wrap{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+    
+
+    
 }
 
 .section-label {
@@ -303,21 +345,36 @@ classes
 }
 
 .phone-link {
+    display: block;
+    margin-top: 0.75rem;
     font-family: "JetBrains Mono", monospace;
     font-size: 1rem;
     color: #9a9ea8;
+
+    transition: color 0.2s ease;
+}
+
+.phone-link:hover {
+    color: #c8ff4d;
 }
 
 #social-row{
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-top:2rem;
 }
 
 .social-link {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.85rem;
     color: #9a9ea8;
+
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: #c8ff4d;
 }
 
 .social-link svg{
@@ -327,6 +384,13 @@ classes
 
 #footer{
     padding: 1.8rem 0;
+    border-top: 1px solid #262933;
+    letter-spacing: 0.02em;
+
+}
+
+#footer-link:hover {
+    color: #c8ff4d;
 }
 
 .footer-content {
