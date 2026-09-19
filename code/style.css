@@ -92,6 +92,13 @@ id's
     display: flex;
     align-items: center;
     gap: 2rem;
+    scroll-target-group: auto;/* when we go to that section it triggers the one below*/
+
+}
+
+#nav-links a:target-current{/*this gets triggered when we change sections*/
+    color: #e9e9ee;
+    background-size: 100% 1px;
 }
 
 #nav-links a {
@@ -100,9 +107,9 @@ id's
     color: #9a9ea8;
     text-decoration: none;
     padding-bottom: 3px;
-    background-image: linear-gradient(#c8ff4d, #c8ff4d);
+    background-image: linear-gradient(#c8ff4d, #c8ff4d);/*makes background as image*/
     background-repeat: no-repeat;
-    background-size: 0% 1px;
+    background-size: 0% 1px;/*to change with transition*/
     background-position: left bottom;
     transition: background-size 0.28s, color 0.2s ease;
 }
@@ -206,8 +213,9 @@ id's
     font-size: 0.78rem;
     color: #9a9ea8;
     border-radius: 5px;
-    border:1px solid #262a34;
+    border:1px solid #c8ff4d;
     padding: 0.35rem 0.6rem;
+    background-color:#15171c;
 }
 
 #email-link {
@@ -453,13 +461,13 @@ classes
 }
 
 #journey-container-2{
-    left: 46%;
-    top: 38%;
+    left: 40%;
+    top: 52%;
 }
 
 #journey-container-3{
-    left: 72%;
-    top: 53%;
+    left: 65%;
+    top: 33%;
 }
 
 #journey-container-4{
@@ -469,18 +477,108 @@ classes
 
 .stop{
     position: absolute;
+    z-index: 3;
 }
 
-.stop input[type="radio"]:checked ~ .card {
-    display: block;
-}   /*means get to .stop and go input of type radio then see if its checked
-    if yes go to .card and change this {}*/
+/* hide the radio but keep it in the DOM so :checked still works */
+.stop input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
 
-    
+.pin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background: #15171c;
+    border: 1.5px solid #c8ff4d;
+    color: #c8ff4d;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.74rem;
+    position: relative;
+    z-index: 2;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+
+.pin:hover{
+    background: #c8ff4d;
+    color: #0c0d10;
+}
+
+/* selected pin stays filled */
+.stop input[type="radio"]:checked ~ .pin{
+    background: #c8ff4d;
+    color: #0c0d10;
+}
+
+
+
+
 .card{
-    display: none;
-    z-index: 3;
-    width: 180px;
+    position: absolute;
+    bottom: calc(100% + 14px);   /* sits above the pin, with a 14px gap */
+    left: 50%;
+    transform: translate(-50%, 6px);  /* centered horizontally, nudged down 6px */
+    width: 215px;
+    background: #15171c;
+    border: 1px solid #262a34;
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    z-index: 5;
+
+    opacity: 0;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+/* the little triangle pointing down at the pin */
+.card::after{/*::after- adds new content in card that does not exit in html*/
+    content: "";/*nessisary for ::after to work*/
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);/*move on x*/
+    border: 6px solid transparent;
+    border-top-color: #15171c;
+}
+
+/* reveal: fade in and slide up into place */
+.stop input[type="radio"]:checked ~ .card{
+    opacity: 1;
+    transform: translate(-50%, 0);/*move left to its 50% width,, 0 move vertical*/
+}
+
+/* selected stop floats above the others */
+.stop:has(input[type="radio"]:checked){
+    z-index: 20;
+}
+
+/*card content*/
+.card-title{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    color: #c8ff4d;
+    margin: 0 0 0.35rem;
+}
+
+.card-subtitle{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: #e9e9ee;
+    margin: 0 0 0.35rem;
+}
+
+.card-desc{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.79rem;
+    line-height: 1.5;
+    color: #9a9ea8;
+    margin: 0;
 }
 
 
@@ -490,22 +588,24 @@ General responsive design
 
 **/
 
-/* TABLET / SMALL LAPTOP */
-@media (max-width: 1024px) {
-}
-
-/* TABLET / LARGE PHONE */
-@media (max-width: 820px) {
-}
-
 
 /* PHONE */
 @media (max-width: 600px) {
+    .card{
+        width: 160px;
+    }
+    #journey-container-1 .card{
+        left: 0;
+        transform: translate(0, 0);
+    }
+    #journey-container-4 .card{
+        left: auto;
+        right: 0;
+        transform: translate(0, 0);
+    }
 }
 
-/* SMALL PHONE */
-@media (max-width: 400px) {
-}
+
 
 /*Projects part*/
 @media (max-width: 700px){

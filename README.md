@@ -2,7 +2,7 @@
 
 A personal developer portfolio site for **A'sem Al-Zaghal** — software engineer based in Amman, Jordan.
 
-**Live site:** https://mrasemz.github.io/portfolio/
+**[Live site](https://mrasemz.github.io/portfolio/)**
 
 
 ## What this is
@@ -34,4 +34,4 @@ To have a single place that represents my work properly — instead of pointing 
 - `docs/` holds the résumé PDF that the "Download résumé" button links to.
 - `documentation/` holds the design reference (Figma export/wireframe) this build was based on.
 
-**Figma design:** https://www.figma.com/site/RBrcVXvkh8pw2eKaE2Tz9g/My-Portfolio?node-id=0-1&p=f&t=ovhYNfONCckyBIZw-0
+**[Figma design](https://www.figma.com/site/RBrcVXvkh8pw2eKaE2Tz9g/My-Portfolio?node-id=0-1&p=f&t=ovhYNfONCckyBIZw-0)**
