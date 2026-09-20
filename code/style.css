@@ -3,14 +3,13 @@ general
 */
 *{
     box-sizing: border-box; /*to ensure all are the same*/
+        scroll-behavior: smooth;
 }
 
 /*
 elements
 */
-html{
-    scroll-behavior: smooth;
-}
+
 body {
     font-family: "Space Grotesk", sans-serif;
     font-size: 16px;
