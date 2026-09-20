@@ -8,7 +8,9 @@ general
 /*
 elements
 */
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Space Grotesk", sans-serif;
     font-size: 16px;
